@@ -5,23 +5,15 @@ import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
 import { Quote } from "../Quote/Quote";
 
-export const Homepage = () => {
+export const Homepage = ({ pageView, indexNum, showQuote }) => {
   const [imgIndex, setImgIndex] = useState(0);
   const [view, setView] = useState("");
+  const [displayQuote, setDisplayQuote] = useState(true);
 
   useEffect(() => {
-    if (window.location.href.includes("design")) {
-      setView("design");
-      setImgIndex(0);
-    }
-    if (window.location.href.includes("production")) {
-      setView("prod");
-      setImgIndex(1);
-    }
-    if (window.location.href.includes("certification")) {
-      setView("cert");
-      setImgIndex(2);
-    }
+    setView(pageView)
+    setImgIndex(indexNum)
+    setDisplayQuote(showQuote)
   });
 
   return (
@@ -44,9 +36,18 @@ export const Homepage = () => {
           {view === "design" && <h2>Design. Manufacture. Deliver.</h2>}
           {view === "prod" && <h2>Produce. Manufacture. Deliver.</h2>}
           {view === "cert" && <h2>Certify. Manufacture. Deliver.</h2>}
+          {view === "about" && <h2>About Us</h2>}
+          {view === "contact" && (
+            <div>
+              <h2>Contact Us</h2>
+              <p>
+                <u>FakeEmail@Email.com</u>
+              </p>
+            </div>
+          )}
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         </div>
-        <Quote />
+        {displayQuote && <Quote />}
       </section>
     </main>
   );
