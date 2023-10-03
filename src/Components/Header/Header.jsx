@@ -37,7 +37,7 @@ export const Header = () => {
           {categories && (
             <ul className="dropdown-content">
               {categories.map((category, index) => (
-                <Link id={index} to={`/flavors/${category}`} onClick={(event) => event.target.parent.removeClass("expand")}>
+                <Link key={index} id={index} to={`/flavors/${category}`} onClick={(event) => event.target.parent.removeClass("expand")}>
                   <li>{category}</li>
                 </Link>
               ))}
