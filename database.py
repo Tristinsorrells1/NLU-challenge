@@ -23,7 +23,7 @@ with open('./public/flavors.csv', 'r') as csvfile:
                 VALUES (?, ?, ?)
             ''', (id_value, category, flavor))
 
-# Commit the changes and close the connection
+
 conn.commit()
 conn.close()
 
