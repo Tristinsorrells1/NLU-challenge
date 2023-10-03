@@ -1,5 +1,5 @@
 import "./Quote.css";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
 export const Quote = () => {
   const [formData, setFormData] = useState({ name: "", email: "", message: "", sendNewsletter: true, capability: "" });

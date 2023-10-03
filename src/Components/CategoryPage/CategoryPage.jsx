@@ -1,6 +1,6 @@
 import "./CategoryPage.css";
 import React, { useEffect, useState } from "react";
-import { Link, NavLink, useNavigate, useParams } from "react-router-dom";
+import { NavLink, useParams } from "react-router-dom";
 
 export const CategoryPage = () => {
   const { category } = useParams();
@@ -24,8 +24,8 @@ export const CategoryPage = () => {
         {flavors.map((flavor, index) => (
           <NavLink key={index} to={`/flavor/${flavor}`}>
             <div className="flavor-result" id={`flavor-${index}`}>
-              <span className="flavor-name">{flavor}</span>
               <img src="/images.png" alt="Flavor Image" />
+              <span className="flavor-name">{flavor}</span>
             </div>
           </NavLink>
         ))}
