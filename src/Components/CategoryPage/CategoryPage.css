@@ -35,7 +35,6 @@ h2 {
   font-weight: bold;
   color: black;
   font-size: 12px;
-  text-align: center;
   margin-top: 5px;
 }
 
@@ -45,4 +44,3 @@ a:hover,
 a:active {
   text-decoration: none;
 }
-
