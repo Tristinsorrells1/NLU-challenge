@@ -13,9 +13,11 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Homepage />} />
-        <Route path="/certification" element={<Homepage />} />
-        <Route path="/production" element={<Homepage />} />
-        <Route path="/design" element={<Homepage />} />
+        <Route path="/certification" element={<Homepage pageView={"cert"} indexNum={2} showQuote={true} />} />
+        <Route path="/production" element={<Homepage pageView={"prod"} indexNum={1} showQuote={true} />} />
+        <Route path="/design" element={<Homepage pageView={"design"} indexNum={0} showQuote={true} />} />
+        <Route path="/about-us" element={<Homepage pageView={"about"} indexNum={0} showQuote={false} />} />
+        <Route path="/contact-us" element={<Homepage pageView={"contact"} indexNum={1} showQuote={false} />} />
         <Route path="/flavors/:category" element={<CategoryPage />} />
         <Route path="/flavor/:flavor" element={<FlavorPage />} />
       </Routes>
