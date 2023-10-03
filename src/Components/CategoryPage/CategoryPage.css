@@ -1,0 +1,48 @@
+.category-container {
+  width: 90%;
+  margin: 0 auto 15vh auto;
+}
+
+.num-of-flavors-text {
+  color: grey;
+}
+
+h2 {
+  margin-bottom: 5px;
+}
+
+.flavor-result {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 150px;
+  margin: 10px;
+  border: 1px solid black;
+}
+
+.flavors-grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flavor-result img {
+  width: 45%;
+  height: auto;
+  margin: 5px;
+}
+
+.flavor-name {
+  font-weight: bold;
+  color: black;
+  font-size: 12px;
+  text-align: center;
+  margin-top: 5px;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+}
+

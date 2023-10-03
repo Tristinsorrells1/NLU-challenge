@@ -1,0 +1,22 @@
+footer {
+  width: 92vw;
+  padding: 0 4vh 0 4vh;
+  position: fixed;
+  border: 1px solid black;
+  background-color: rgb(240, 236, 236);
+  bottom: 0;
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-logo {
+  height: 7vh;
+}
+
+.copywrite-text {
+  color: grey;
+  font-size: 12px;
+}
+

@@ -1,0 +1,30 @@
+main {
+  width: 95%;
+  margin: 0 auto 15vh auto;
+}
+
+.splide__slide img {
+  height: 30vh;
+  width: 100%;
+}
+
+.slider {
+  margin: 2.5vh auto 0 auto;
+}
+
+.dummy-text > h2 {
+  padding: 0;
+  margin: 0;
+}
+
+.dummy-text {
+  width: 55vw;
+}
+
+.quote-and-text-container {
+  display: flex;
+  height: 55vh;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-top: 4vh;
+}
