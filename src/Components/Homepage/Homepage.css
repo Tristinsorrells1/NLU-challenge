@@ -1,6 +1,6 @@
 main {
   width: 95%;
-  margin: 0 auto 15vh auto;
+  margin: 0 auto 30vh auto;
 }
 
 .splide__slide img {
@@ -18,13 +18,24 @@ main {
 }
 
 .dummy-text {
-  width: 55vw;
+  width: 100%;
 }
 
 .quote-and-text-container {
   display: flex;
+  flex-direction: column;
   height: 55vh;
   align-items: baseline;
   justify-content: space-between;
   margin-top: 4vh;
+}
+
+@media (min-width: 450px) {
+  .quote-and-text-container {
+    flex-direction: row;
+  }
+
+  .dummy-text {
+    width: 54%;
+  }
 }

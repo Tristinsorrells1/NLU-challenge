@@ -20,7 +20,7 @@
 
 .navbar a {
   float: left;
-  font-size: 12px;
+  font-size: 11px;
   color: white;
   text-align: center;
   padding: 14px 16px;
@@ -33,7 +33,7 @@
 }
 
 .dropdown .dropbtn {
-  font-size: 12px;
+  font-size: 11px;
   border: none;
   outline: none;
   color: white;
