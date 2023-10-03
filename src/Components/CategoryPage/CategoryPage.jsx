@@ -19,7 +19,7 @@ export const CategoryPage = () => {
   return (
     <section className="category-container">
       <h2>{category} Flavors</h2>
-      <span className="num-of-flavors-text">{flavors.length} results</span>
+      {flavors.length !== 0 && <span className="num-of-flavors-text">{flavors.length} results</span>}
       {flavors && <div className="flavors-grid">
         {flavors.map((flavor, index) => (
           <NavLink key={index} to={`/flavor/${flavor}`}>
