@@ -10,14 +10,25 @@ export const Quote = () => {
   };
 
   const handleCheck = (event) => {
-    const sendUserNewsletter = !formData.sendNewsletter
-    console.log(sendUserNewsletter)
+    const sendUserNewsletter = !formData.sendNewsletter;
     setFormData((prevFormData) => ({ ...prevFormData, sendNewsletter: sendUserNewsletter }));
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    alert(`Name: ${formData.name}, Email: ${formData.email}, Message: ${formData.message}`);
+  
+    fetch("http://localhost:5000/contacts", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log("New contact added successfully. Contact ID:", data.contactId);
+      })
+      .catch((error) => console.error("Error adding contact:", error));
   };
 
   return (
@@ -31,13 +42,19 @@ export const Quote = () => {
           <input className="form-data" type="email" id="email" name="email" placeholder="Email" value={formData.email} onChange={handleChange} required />
         </label>
         <label>
-          <select className="form-data capability-dropdown" value={formData.capability} onChange={handleChange} name="capability">
-            <option value="" disabled selected>
+          <select className="form-data capability-dropdown" value={formData.capability} onChange={handleChange} name="capability" required>
+            <option value="" disabled={true}>
               Select a capability
             </option>
-            <option value="Design">Design</option>
-            <option value="Production">Production</option>
-            <option value="Certification">Certification</option>
+            <option name="capability" value="Design">
+              Design
+            </option>
+            <option name="capability" value="Production">
+              Production
+            </option>
+            <option name="capability" value="Certification">
+              Certification
+            </option>
           </select>
         </label>
         <label htmlFor="message">
