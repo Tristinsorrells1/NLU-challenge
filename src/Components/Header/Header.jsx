@@ -5,14 +5,12 @@ import { Link } from "react-router-dom";
 export const Header = () => {
   const [categories, setCategories] = useState([]);
  
-
   useEffect(() => {
-    fetch("http://localhost:5000/categories") // Update with your server URL
+    fetch("http://localhost:5000/categories") 
       .then((response) => response.json())
       .then((data) => setCategories(data.categories))
       .catch((error) => console.error("Error fetching data:", error));
   }, []);
-
 
   return (
     <section className="header-section">
@@ -38,8 +36,8 @@ export const Header = () => {
           </button>
           {categories && (
             <ul className="dropdown-content">
-              {categories.map((category) => (
-                <Link to={`/flavors/${category}`}>
+              {categories.map((category, index) => (
+                <Link id={index} to={`/flavors/${category}`} onClick={((event) => event.target.parent.removeClass("expand"))}>
                   <li>{category}</li>
                 </Link>
               ))}
