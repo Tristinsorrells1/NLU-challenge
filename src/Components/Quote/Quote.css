@@ -1,18 +1,20 @@
 .quote-container {
   border: 1px solid black;
-  width: 35vw;
-  height: 50vh;
+  width: 70%;
+  height: 60vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 1.5vh auto 0 auto;
 }
+
 .get-quote-text {
-  margin: 1vh 0 4vh 0;
+  margin: 1vh;
 }
 
 .submit-btn {
   display: block;
-  width: 20vw;
+  width: 40vw;
   background-color: rgb(95, 95, 240);
   color: white;
 }
@@ -23,6 +25,7 @@ form {
   height: 30vh;
   justify-content: space-evenly;
   align-items: center;
+  margin: 20px;
 }
 
 form > * {
@@ -30,12 +33,12 @@ form > * {
 }
 
 .form-data {
-  width: 30vw;
+  width: 50vw;
 }
 
 .capability-dropdown {
- width: 31vw;
- color: grey;
+  width: 51vw;
+  color: grey;
 }
 
 label {
@@ -43,7 +46,47 @@ label {
 }
 
 .newsletter-text {
- font-size: 12px;
+  font-size: 12px;
 }
 
+@media (min-width: 450px) {
+  .quote-container {
+    height: 45vh;
+  }
 
+  .submit-btn {
+    width: 20vw;
+  }
+
+  .form-data {
+    width: 25vw;
+  }
+
+  .capability-dropdown {
+    width: 26vw;
+  }
+}
+
+@media (min-width: 650px) {
+  .quote-container {
+    width: 40%;
+  }
+}
+
+@media (min-width: 900px) {
+  .quote-container {
+    width: 25%;
+  }
+
+  .form-data {
+    width: 15vw;
+  }
+
+  .capability-dropdown {
+    width: 15.5vw;
+  }
+
+  .submit-btn {
+    width: 20vw;
+  }
+}
