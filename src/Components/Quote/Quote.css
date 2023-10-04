@@ -1,11 +1,11 @@
 .quote-container {
   border: 1px solid black;
-  width: 100%;
+  width: 70%;
   height: 60vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0 auto 0 auto;
+  margin: 1.5vh auto 0 auto;
 }
 
 .get-quote-text {
@@ -33,11 +33,11 @@ form > * {
 }
 
 .form-data {
-  width: 60vw;
+  width: 50vw;
 }
 
 .capability-dropdown {
-  width: 61vw;
+  width: 51vw;
   color: grey;
 }
 
