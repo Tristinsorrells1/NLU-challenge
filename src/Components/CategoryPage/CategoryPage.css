@@ -23,6 +23,7 @@ h2 {
 .flavors-grid {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .flavor-result img {
