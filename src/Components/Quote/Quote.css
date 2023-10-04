@@ -5,6 +5,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 0 auto 0 auto;
 }
 
 .get-quote-text {
@@ -50,7 +51,6 @@ label {
 
 @media (min-width: 450px) {
   .quote-container {
-    width: 45%;
     height: 45vh;
   }
 
@@ -59,10 +59,34 @@ label {
   }
 
   .form-data {
-    width: 30vw;
+    width: 25vw;
   }
 
   .capability-dropdown {
-    width: 31vw;
+    width: 26vw;
+  }
+}
+
+@media (min-width: 650px) {
+  .quote-container {
+    width: 40%;
+  }
+}
+
+@media (min-width: 900px) {
+  .quote-container {
+    width: 25%;
+  }
+
+  .form-data {
+    width: 15vw;
+  }
+
+  .capability-dropdown {
+    width: 15.5vw;
+  }
+
+  .submit-btn {
+    width: 20vw;
   }
 }

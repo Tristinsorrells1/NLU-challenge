@@ -15,7 +15,7 @@ h2 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 150px;
+  width: 220px;
   margin: 10px;
   border: 1px solid black;
 }
@@ -44,3 +44,33 @@ a:hover,
 a:active {
   text-decoration: none;
 }
+
+.flavor-quote-container {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 450px) {
+  .flavor-result {
+    width: 180px;
+  }
+  .flavor-quote-container {
+    flex-direction: row;
+  }
+  .flavors-grid {
+    width: 80%;
+  }
+}
+
+@media (min-width: 650px) {
+  .flavor-result {
+    width: 170px;
+  }
+}
+
+@media (min-width: 750px) {
+  .flavor-result {
+    width: 120px;
+  }
+}
+
