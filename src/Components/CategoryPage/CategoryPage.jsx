@@ -1,6 +1,7 @@
 import "./CategoryPage.css";
 import React, { useEffect, useState } from "react";
 import { NavLink, useParams } from "react-router-dom";
+import { Quote } from "../Quote/Quote";
 
 export const CategoryPage = () => {
   const { category } = useParams();
@@ -20,16 +21,21 @@ export const CategoryPage = () => {
     <section className="category-container">
       <h2>{category} Flavors</h2>
       {flavors.length !== 0 && <span className="num-of-flavors-text">{flavors.length} results</span>}
-      {flavors && <div className="flavors-grid">
-        {flavors.map((flavor, index) => (
-          <NavLink key={index} to={`/flavor/${flavor}`}>
-            <div className="flavor-result" id={`flavor-${index}`}>
-              <img src="/images.png" alt="Flavor Image" />
-              <span className="flavor-name">{flavor}</span>
-            </div>
-          </NavLink>
-        ))}
-    </div>}
+      {flavors.length !== 0 && (
+        <div className="flavor-quote-container">
+          <div className="flavors-grid">
+            {flavors.map((flavor, index) => (
+              <NavLink key={index} to={`/flavor/${flavor}`}>
+                <div className="flavor-result" id={`flavor-${index}`}>
+                  <img src="/images.png" alt="Flavor Image" />
+                  <span className="flavor-name">{flavor}</span>
+                </div>
+              </NavLink>
+            ))}
+          </div>
+          <Quote />
+        </div>
+      )}
     </section>
   );
 };
