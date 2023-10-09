@@ -13,7 +13,7 @@
 - To stop the local server from running in your terminal use `command + c`.
     
 ## App Demo
-Here is a short video demonstration: [video](https://www.loom.com/share/3146eef085714035880f834406aaaf0e?sid=2c6a51a7-98b0-45d0-95e8-21bda62cf967)
+Here is a short video demonstration: [video](https://www.loom.com/share/a71d28291300440fb7a20f55717df4cf?sid=0e56c8c9-4f97-43bf-bc5d-c0f1250cadd7)
 
 ## Future Considerations
 - I would like to use Axe DevTools and Google Lighthouse for Accessibility Testing.
