@@ -11,7 +11,7 @@ function App() {
     <>
       <Header />
       <Routes>
-        <Route path="/" element={<Homepage />} />
+        <Route path="/" element={<Homepage pageView={"design"} indexNum={0} showQuote={true} />} />
         <Route path="/certification" element={<Homepage pageView={"cert"} indexNum={2} showQuote={true} />} />
         <Route path="/production" element={<Homepage pageView={"prod"} indexNum={1} showQuote={true} />} />
         <Route path="/design" element={<Homepage pageView={"design"} indexNum={0} showQuote={true} />} />
